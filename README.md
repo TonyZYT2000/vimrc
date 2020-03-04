@@ -1,0 +1,2 @@
+# vimrc
+ZYT's .vimrc
