@@ -66,6 +66,7 @@ set backspace=2                " Fix backspacing in insert mode
 set backspace=indent,eol,start " Make backspace work normally
 set fo+=r                      " Support continuing * in C block comments
 set ff=unix                    " Unix EOL
+set mouse=a                    " Support mouse
 set cindent                    " Support C autoindenting of braces, etc.
 set hlsearch                   " Highlight search results
 set incsearch                  " Increment search
@@ -74,7 +75,7 @@ set ignorecase                 " Make default search not case sensitive
 set tabpagemax=100             " Allow 100 tabs opened instead of 10
 set noerrorbells               " Turn off error bells (screen flashing)
 set updatetime=100             " Set update time to 100ms
-set encoding=utf-8
+set encoding=utf-8             " Set default encoding to utf-8
 set clipboard+=unnamed
 set fileencodings=utf-8,utf-16,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
                                " Auto detect file encoding
