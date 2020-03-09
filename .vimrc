@@ -27,19 +27,6 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
 Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeTabsToggle' }
 call plug#end()
 
-" Plugin Setting
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch' ],
-      \             [ 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
 " Set syntax and color scheme
 syntax on
 set bg=dark
@@ -93,19 +80,6 @@ set clipboard+=unnamed
 set fileencodings=utf-8,utf-16,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
                                " Auto detect file encoding
 
-" EasyMotion Plugin Move Around
-" <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
-
 " Key Remap Settings
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
@@ -117,15 +91,17 @@ nnoremap <silent><CR> :noh<CR><CR>
 nnoremap <silent><S-Esc> :set bg=dark<CR>
 nnoremap <silent><A-t> :TagbarToggle<CR>
 nnoremap <silent><A-e> :NERDTreeTabsToggle<CR>
-nnoremap <silent> <C-Y> :call smooth_scroll#up(1, 3, 1)<CR>
-nnoremap <silent> <C-E> :call smooth_scroll#down(1, 3, 1)<CR>
-nnoremap <silent> <C-U> :call smooth_scroll#up(&scroll, 36, 2)<CR>
-nnoremap <silent> <C-D> :call smooth_scroll#down(&scroll, 36, 2)<CR>
-nnoremap <silent> <C-B> :call smooth_scroll#up(&scroll*2, 36, 4)<CR>
-nnoremap <silent> <C-F> :call smooth_scroll#down(&scroll*2, 36, 4)<CR>
 
 " Enable filetype detection. Used in the myFileSettings augroup below
 filetype plugin on
+
+" Create group so that highlighting extends to multiple vim tabs simultaneously
+augroup myMatches
+  autocmd!
+  au WinEnter,BufEnter *
+    \ call clearmatches() |
+    \ call matchadd('OverLength', '\%81v.\+', -1)
+augroup END
 
 " Group all file indentation settings together.
 augroup myFileSettings
@@ -179,11 +155,41 @@ augroup myFileSettings
 
 augroup END
 
-" Create group so that highlighting extends to multiple vim tabs simultaneously
-augroup myMatches
-  autocmd!
-  au WinEnter,BufEnter *
-    \ call clearmatches() |
-    \ call matchadd('OverLength', '\%81v.\+', -1)
-augroup END
+" Plugin Customization
+"
+" Lightline Status Line
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch' ],
+      \             [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
+" EasyMotion Plugin Move Around
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+"Smooth Scroll Settings
+nnoremap <silent> <C-Y> :call smooth_scroll#up(1, 3, 1)<CR>
+nnoremap <silent> <C-E> :call smooth_scroll#down(1, 3, 1)<CR>
+nnoremap <silent> <C-U> :call smooth_scroll#up(&scroll, 36, 2)<CR>
+nnoremap <silent> <C-D> :call smooth_scroll#down(&scroll, 36, 2)<CR>
+nnoremap <silent> <C-B> :call smooth_scroll#up(&scroll*2, 36, 4)<CR>
+nnoremap <silent> <C-F> :call smooth_scroll#down(&scroll*2, 36, 4)<CR>
