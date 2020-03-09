@@ -17,6 +17,7 @@ Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'wlangstroth/vim-racket'
 Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'easymotion/vim-easymotion'
@@ -52,9 +53,9 @@ set laststatus=2               " Enable lightline plugin
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
-  set lines=24 columns=100
-  set guifont=Sarasa\ Mono\ SC:h14 "Set font
-  "set guifont=Hack\ NF:h14 "Set font
+  set lines=30 columns=100
+  "set guifont=Sarasa\ Mono\ SC:h14 "Set font
+  set guifont=Fira\ Code:h14 "Set font
 endif
 
 " Highlight columns over 80 as red
