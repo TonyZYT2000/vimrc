@@ -28,6 +28,17 @@ Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeTabsToggle' }
 call plug#end()
 
 " Plugin Setting
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch' ],
+      \             [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 " Set syntax and color scheme
 syntax on
@@ -73,6 +84,7 @@ set hlsearch                   " Highlight search results
 set incsearch                  " Increment search
 set smartcase                  " Override ignorecase if search contains capital
 set ignorecase                 " Make default search not case sensitive
+set updatetime=100             " Set update time to 100ms
 set tabpagemax=100             " Allow 100 tabs opened instead of 10
 set noerrorbells               " Turn off error bells (screen flashing)
 set updatetime=100             " Set update time to 100ms
