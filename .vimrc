@@ -156,9 +156,9 @@ augroup myFileSettings
 
 augroup END
 
-" Plugin Customization
+" Plugin Settings
 
-" Lightline Status Line
+" Lightline Status Line Customization
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
@@ -171,7 +171,7 @@ let g:lightline = {
       \ },
       \ }
 
-" EasyMotion Plugin Move Around
+" EasyMotion Settings
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
