@@ -63,8 +63,9 @@ Then in vim, run ``:PlugInstall`` and all set!
 
 - [scrooloose/nerdcommenter](https://github.com/preservim/nerdcommenter): Commet blocks of codes easily!
     - Type `\cc` to comment out the line.
+    - Type `\cu` to uncomment the line.
     - Use visual mode to select a block of code, and type `\cc` to comment the block.
-    - Use visual mode to select a block of code, and type `\cu` to uncomment.
+    - Use visual mode to select a block of code, and type `\cu` to uncomment the block
 
 - [terryma/vim-smooth-scroll](https://github.com/terryma/vim-smooth-scroll): Make scrolling in vim smooth.
 
@@ -72,6 +73,7 @@ Then in vim, run ``:PlugInstall`` and all set!
 
 - [skywind3000/vim-terminal-help](https://github.com/skywind3000/vim-terminal-help): Nice terminal integration.
     - Mapped to `Alt+=`.
+    - Type `Ctrl+\ Ctrl+N` to enter normal mode in terminal.
 
 - [scrooloose/nerdtree](https://github.com/preservim/nerdtree): A tree explorer on side.
     - Mapped to `Alt+E`.
