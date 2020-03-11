@@ -34,7 +34,7 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [ap/vim-css-color](https://github.com/ap/vim-css-color): Highlight color values.
 
 - [majutsushi/tagbar](https://github.com/majutsushi/tagbar): Browse tags!
-    - [Excuberant Ctag](http://ctags.sourceforge.net/) required.
+    - [Exuberant Ctags](http://ctags.sourceforge.net/) required.
     - Mapped to `Alt+T`.
 
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive): Git integration.
