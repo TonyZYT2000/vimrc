@@ -1,6 +1,8 @@
 # vimrc
 ZYT's .vimrc!
 
+![vimrc](https://s1.ax1x.com/2020/03/12/8VBpVI.png)
+
 ## Setup
 
 Install [vim-plug](https://github.com/junegunn/vim-plug) to get plugins I use.
