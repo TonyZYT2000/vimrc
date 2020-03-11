@@ -33,6 +33,8 @@ Then in vim, run ``:PlugInstall`` and all set!
 
 - [ap/vim-css-color](https://github.com/ap/vim-css-color): Highlight color values.
 
+- [mhinz/vim-signify](https://github.com/mhinz/vim-signify): Show git diff in sign column.
+
 - [majutsushi/tagbar](https://github.com/majutsushi/tagbar): Browse tags!
     - [Exuberant Ctags](http://ctags.sourceforge.net/) required.
     - Mapped to `Alt+T`.
@@ -49,8 +51,6 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot): Language pack.
 
 - [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim): Beautiful status line.
-
-- [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): Show differences on side.
 
 - [wlangstroth/vim-racket](https://github.com/wlangstroth/vim-racket): Racket support.
 

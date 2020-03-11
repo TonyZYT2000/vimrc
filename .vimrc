@@ -9,6 +9,7 @@ call plug#begin()
 Plug 'elzr/vim-json'
 Plug 'tomasr/molokai'
 Plug 'ap/vim-css-color'
+Plug 'mhinz/vim-signify'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -16,7 +17,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'wlangstroth/vim-racket'
 Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-smooth-scroll'
@@ -156,7 +156,7 @@ augroup myFileSettings
 augroup END
 
 " Plugin Customization
-"
+
 " Lightline Status Line
 let g:lightline = {
       \ 'colorscheme': 'powerline',
