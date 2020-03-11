@@ -189,6 +189,7 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Translator Settings
 " Echo translation in the cmdline
+let g:translator_default_engines=['google', 'youdao']
 nmap <silent> <Leader>tt <Plug>Translate
 vmap <silent> <Leader>tt <Plug>TranslateV
 " Display translation in a window

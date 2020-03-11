@@ -56,6 +56,11 @@ Then in vim, run ``:PlugInstall`` and all set!
 
 - [wlangstroth/vim-racket](https://github.com/wlangstroth/vim-racket): Racket support.
 
+- [voldikss/vim-translator](https://github.com/voldikss/vim-translator): Translate text in vim to Chinese.
+    - Type `\tt` to translate current word in command line.
+    - Type `\tw` to translate current word in a pop-up window.
+    - Type `\tr` to replace current word with translation.
+
 - [scrooloose/nerdcommenter](https://github.com/preservim/nerdcommenter): Commet blocks of codes easily!
     - Type `\cc` to comment out the line.
     - Use visual mode to select a block of code, and type `\cc` to comment the block.
