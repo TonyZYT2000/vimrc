@@ -18,6 +18,7 @@ Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'wlangstroth/vim-racket'
+Plug 'voldikss/vim-translator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'easymotion/vim-easymotion'
@@ -185,6 +186,17 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Translator Settings
+" Echo translation in the cmdline
+nmap <silent> <Leader>tt <Plug>Translate
+vmap <silent> <Leader>tt <Plug>TranslateV
+" Display translation in a window
+nmap <silent> <Leader>tw <Plug>TranslateW
+vmap <silent> <Leader>tw <Plug>TranslateWV
+" Replace the text with translation
+nmap <silent> <Leader>tr <Plug>TranslateR
+vmap <silent> <Leader>tr <Plug>TranslateRV
 
 "Smooth Scroll Settings
 nnoremap <silent> <C-Y> :call smooth_scroll#up(1, 3, 1)<CR>
