@@ -109,49 +109,49 @@ augroup myFileSettings
   autocmd!
 
   " Tab settings for C files
-  au FileType c set expandtab " turn tabs into spaces visually
-  au FileType c set shiftwidth=4 " set width of < and > cmd to 4 spaces
+  au FileType c set expandtab     " turn tabs into spaces visually
+  au FileType c set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType c set softtabstop=4 " pressing tab inserts 4 spaces
 
+  " Tab settings for bash file
+  au FileType sh set expandtab     " turn tabs into spaces visually
+  au FileType sh set shiftwidth=2  " set width of < and > cmd to 2 spaces
+  au FileType sh set softtabstop=2 " pressing tab inserts 2 spaces
+
   " Tab settings for C++ files, C/C++ header files
-  au FileType cpp set expandtab " turn tabs into spaces visually
-  au FileType cpp set shiftwidth=4 " set width of < and > cmd to 4 spaces
+  au FileType cpp set expandtab     " turn tabs into spaces visually
+  au FileType cpp set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType cpp set softtabstop=4 " pressing tab inserts 4 spaces
 
+  " Tab settings for vim file
+  au FileType vim set expandtab     " turn tabs into spaces visually
+  au FileType vim set shiftwidth=2  " set width of < and > cmd to 2 spaces
+  au FileType vim set softtabstop=2 " pressing tab inserts 2 spaces
+
   " Tab settings for Java files
-  au FileType java set expandtab " turn tabs into spaces visually
-  au FileType java set shiftwidth=4 " set width of < and > cmd to 4 spaces
+  au FileType java set expandtab     " turn tabs into spaces visually
+  au FileType java set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType java set softtabstop=4 " pressing tab inserts 4 spaces
 
+  " No expansion at all for Makefiles
+  au FileType make set tabstop=8     " tab size as 8 spaces
+  au FileType make set noexpandtab   " keep tabs as tabs
+  au FileType make set shiftwidth=8  " set width of < and > cmd to 8 spaces
+  au FileType make set softtabstop=8 " pressing tab inserts 8 spaces
+
   " Tab settings for Python files
-  au FileType python set expandtab " turn tabs into spaces visually
-  au FileType python set shiftwidth=4 " set width of < and > cmd to 4 spaces
+  au FileType python set expandtab     " turn tabs into spaces visually
+  au FileType python set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType python set softtabstop=4 " pressing tab inserts 4 spaces
 
-  " Tab settings for bash file
-  au FileType sh set expandtab " turn tabs into spaces visually
-  au FileType sh set shiftwidth=2 " set width of < and > cmd to 4 spaces
-  au FileType sh set softtabstop=2 " pressing tab inserts 4 spaces
-
-  " Tab settings for vim file
-  au FileType vim set expandtab " turn tabs into spaces visually
-  au FileType vim set shiftwidth=2 " set width of < and > cmd to 4 spaces
-  au FileType vim set softtabstop=2 " pressing tab inserts 4 spaces
-
-  " No expansion at all for Makefiles
-  au FileType make set noexpandtab " keep tabs as tabs
-  au FileType make set shiftwidth=8 " set width of < and > cmd to 8 spaces
-  au FileType make set softtabstop=8 " pressing tab inserts 8 spaces
-  au FileType make set tabstop=8
-
   " Tab settings for scheme file
-  au FileType scheme set expandtab " turn tabs into spaces visually
-  au FileType scheme set shiftwidth=2 " set width of < and > cmd to 4 spaces
-  au FileType scheme set softtabstop=2 " pressing tab inserts 4 spaces
+  au FileType scheme set expandtab     " turn tabs into spaces visually
+  au FileType scheme set shiftwidth=2  " set width of < and > cmd to 2 spaces
+  au FileType scheme set softtabstop=2 " pressing tab inserts 2 spaces
 
   " Tab settings for Markdown file
-  au FileType markdown set expandtab " turn tabs into spaces visually
-  au FileType markdown set shiftwidth=4 " set width of < and > cmd to 4 spaces
+  au FileType markdown set expandtab     " turn tabs into spaces visually
+  au FileType markdown set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType markdown set softtabstop=4 " pressing tab inserts 4 spaces
 
 augroup END
