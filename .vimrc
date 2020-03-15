@@ -72,9 +72,9 @@ set hlsearch                   " Highlight search results
 set incsearch                  " Increment search
 set smartcase                  " Override ignorecase if search contains capital
 set ignorecase                 " Make default search not case sensitive
+set noerrorbells               " Turn off error bells (screen flashing)
 set updatetime=100             " Set update time to 100ms
 set tabpagemax=100             " Allow 100 tabs opened instead of 10
-set noerrorbells               " Turn off error bells (screen flashing)
 set updatetime=100             " Set update time to 100ms
 set encoding=utf-8             " Set default encoding to utf-8
 set clipboard+=unnamed
@@ -82,16 +82,16 @@ set fileencodings=utf-8,utf-16,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
                                " Auto detect file encoding
 
 " Key Remap Settings
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-nnoremap <Tab> :tabn<CR>
-nnoremap <S-Tab> :tabp<CR>
-nnoremap <silent><CR> :noh<CR><CR>
-nnoremap <silent><S-Esc> :set bg=dark<CR>
-nnoremap <silent><A-t> :TagbarToggle<CR>
-nnoremap <silent><A-e> :NERDTreeTabsToggle<CR>
+nnoremap <C-H> <C-W>h                           " Move to window on the left
+nnoremap <C-J> <C-W>j                           " Move to window below
+nnoremap <C-K> <C-W>k                           " Move to window above
+nnoremap <C-L> <C-W>l                           " Move to window on the right
+nnoremap <Tab> :tabn<CR>                        " Go to next tab
+nnoremap <S-Tab> :tabp<CR>                      " Go to previous tab
+nnoremap <silent><CR> :noh<CR><CR>              " Clear search highlight
+nnoremap <silent><S-Esc> :set bg=dark<CR>       " Set background to dark
+nnoremap <silent><A-t> :TagbarToggle<CR>        " Toggle tag bar
+nnoremap <silent><A-e> :NERDTreeTabsToggle<CR>  " Toggle NERDTree
 
 " Enable filetype detection. Used in the myFileSettings augroup below
 filetype plugin on
