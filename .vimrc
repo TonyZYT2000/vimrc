@@ -73,7 +73,6 @@ set incsearch                  " Increment search
 set smartcase                  " Override ignorecase if search contains capital
 set ignorecase                 " Make default search not case sensitive
 set noerrorbells               " Turn off error bells (screen flashing)
-set updatetime=100             " Set update time to 100ms
 set tabpagemax=100             " Allow 100 tabs opened instead of 10
 set updatetime=100             " Set update time to 100ms
 set encoding=utf-8             " Set default encoding to utf-8
