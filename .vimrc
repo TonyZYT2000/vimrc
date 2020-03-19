@@ -36,8 +36,8 @@ set termguicolors
 
 " Appearance Settings
 set nu                         " Line numbers on
-set tw=80                      " Set the total width to 80
-set lbr                        " Automatically break when total width is hit
+"set tw=80                      " Set the total width to 80
+"set lbr                        " Automatically break when total width is hit
 set ruler                      " Show column and line at bottom
 set showcmd                    " Show (partial) command in status line.
 set colorcolumn=80             " Put a red line at column 80
@@ -58,7 +58,7 @@ if has("gui_running")
 endif
 
 " Highlight columns over 80 as red
-highlight OverLength      ctermbg=red   guibg=red
+"highlight OverLength ctermbg=red guibg=red
 
 " Function Settings
 set autoindent                 " Auto indentation
@@ -100,7 +100,7 @@ augroup myMatches
   autocmd!
   au WinEnter,BufEnter *
     \ call clearmatches() |
-    \ call matchadd('OverLength', '\%81v.\+', -1)
+    "\ call matchadd('OverLength', '\%81v.\+', -1)
 augroup END
 
 " Group all file indentation settings together.
