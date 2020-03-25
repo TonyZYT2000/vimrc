@@ -1,4 +1,5 @@
 # vimrc
+
 ZYT's .vimrc!
 
 ![vimrc](https://s1.ax1x.com/2020/03/12/8VBpVI.png)
@@ -70,7 +71,15 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [terryma/vim-smooth-scroll](https://github.com/terryma/vim-smooth-scroll): Make scrolling in vim smooth.
 
 - [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion): Move cursor around easily.
-
+    - Type `s{char}{char}` to search for 2 characters and move to them.
+    - Type `\f{char}` to search for 1 character and move to them.
+    - Type `\w` to move to a word.
+    - Type `\L` to move to a line.
+    - Type `\h` to move left with EasyMotion.
+- Type `\j` to move down with EasyMotion.
+    - Type `\k` to move up with EasyMotion.
+    - Type `\l` to move right with EasyMotion.
+    
 - [skywind3000/vim-terminal-help](https://github.com/skywind3000/vim-terminal-help): Nice terminal integration.
     - Mapped to `Alt+=`.
     - Type `Ctrl+\ Ctrl+N` to enter normal mode in terminal.
