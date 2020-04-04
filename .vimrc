@@ -9,6 +9,7 @@ call plug#begin()
 Plug 'elzr/vim-json'
 Plug 'tomasr/molokai'
 Plug 'ap/vim-css-color'
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
@@ -23,9 +24,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'easymotion/vim-easymotion'
 Plug 'skywind3000/vim-terminal-help'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
-Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeTabsToggle' }
-Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeTabsToggle' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeToggle' }
 call plug#end()
 
 " Set syntax and color scheme
@@ -36,17 +37,17 @@ set termguicolors
 
 " Appearance Settings
 set nu                         " Line numbers on
-"set tw=80                      " Set the total width to 80
 "set lbr                        " Automatically break when total width is hit
+"set tw=80                      " Set the total width to 80
 set ruler                      " Show column and line at bottom
+"set nowrap                     " No line wrapping!
 set showcmd                    " Show (partial) command in status line.
+set showmatch                  " Check matching delims () {} []
 set colorcolumn=80             " Put a red line at column 80
 set noshowmode                 " Not show current mode
 set guioptions=Te              " Keep the copy, cut, save GUI buttons visible
-"set nowrap                     " No line wrapping!
 set list                       " Turn on visual spaces/tabs
 set listchars=tab:>-           " Make tabs look like >--------
-set showmatch                  " Check matching delims () {} []
 set laststatus=2               " Enable lightline plugin
 
 if has("gui_running")
@@ -61,9 +62,6 @@ endif
 "highlight OverLength ctermbg=red guibg=red
 
 " Function Settings
-set autoindent                 " Auto indentation
-set backspace=2                " Fix backspacing in insert mode
-set backspace=indent,eol,start " Make backspace work normally
 set fo+=r                      " Support continuing * in C block comments
 set ff=unix                    " Unix EOL
 set mouse=a                    " Support mouse
@@ -72,28 +70,41 @@ set hlsearch                   " Highlight search results
 set incsearch                  " Increment search
 set smartcase                  " Override ignorecase if search contains capital
 set ignorecase                 " Make default search not case sensitive
+set autoindent                 " Auto indentation
+set splitbelow                 " Set sp to split below
+set splitright                 " Set vsp to split on right
 set noerrorbells               " Turn off error bells (screen flashing)
 set tabpagemax=100             " Allow 100 tabs opened instead of 10
 set updatetime=100             " Set update time to 100ms
 set encoding=utf-8             " Set default encoding to utf-8
-set clipboard+=unnamed
+set backspace=2                " Fix backspacing in insert mode
+set backspace=indent,eol,start " Make backspace work normally
+set clipboard^=unnamed,unnamedplus
 set fileencodings=utf-8,utf-16,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
                                " Auto detect file encoding
 
 " Key Remap Settings
-nnoremap <C-H> <C-W>h                           " Move to window on the left
-nnoremap <C-J> <C-W>j                           " Move to window below
-nnoremap <C-K> <C-W>k                           " Move to window above
-nnoremap <C-L> <C-W>l                           " Move to window on the right
-nnoremap <Tab> :tabn<CR>                        " Go to next tab
-nnoremap <S-Tab> :tabp<CR>                      " Go to previous tab
-nnoremap <silent><CR> :noh<CR><CR>              " Clear search highlight
-nnoremap <silent><S-Esc> :set bg=dark<CR>       " Set background to dark
-nnoremap <silent><A-t> :TagbarToggle<CR>        " Toggle tag bar
-nnoremap <silent><A-e> :NERDTreeTabsToggle<CR>  " Toggle NERDTree
-
-" Enable filetype detection. Used in the myFileSettings augroup below
-filetype plugin on
+" Move cursor around with Ctrl+hjkl
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+" Move cursor around with Alt+Shift+hjkl
+nnoremap <A-S-H> <C-W>h
+nnoremap <A-S-J> <C-W>j
+nnoremap <A-S-K> <C-W>k
+nnoremap <A-S-L> <C-W>l
+" Move between tabs
+nnoremap <Leader><Tab> :tabn<CR>
+nnoremap <Leader><S-Tab> :tabp<CR>
+" Fuzzy file search
+nnoremap <silent><C-P> :Files<CR>
+" Fix weird gVim bug
+nnoremap <S-Esc> :set bg=dark<CR>
+" clear search result
+nnoremap <silent><CR> :noh<CR><CR>
+nnoremap <silent><A-t> :TagbarToggle<CR>
+nnoremap <silent><A-e> :NERDTreeToggle<CR>
 
 " Create group so that highlighting extends to multiple vim tabs simultaneously
 augroup myMatches
@@ -102,6 +113,9 @@ augroup myMatches
     \ call clearmatches() |
     "\ call matchadd('OverLength', '\%81v.\+', -1)
 augroup END
+
+" Enable filetype detection. Used in the myFileSettings augroup below
+filetype plugin on
 
 " Group all file indentation settings together.
 augroup myFileSettings
