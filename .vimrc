@@ -187,6 +187,8 @@ let g:lightline = {
 " Signify Settings
 let g:signify_skip_filetype = { 'markdown': 1 }
 
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
 " EasyMotion Settings
 let g:EasyMotion_smartcase = 1  " Enable smartcase for characters
 let g:EasyMotion_do_mapping = 0 " Disable default key mappings

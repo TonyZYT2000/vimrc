@@ -37,6 +37,8 @@ Then in vim, run ``:PlugInstall`` and all set!
     - Fuzzy file search mapped to `Ctrl+P`.
     - `Ctrl+j/k` to move between results.
     - `Ctrl+t` to open search result in new tab.
+    - `Ctrl+x` to open search result in horizontal split window.
+    - `Ctrl+v` to open search result in vertical split window.
 - [mhinz/vim-signify](https://github.com/mhinz/vim-signify): Show git diff in sign column.
 - [majutsushi/tagbar](https://github.com/majutsushi/tagbar): Browse tags!
     - [Exuberant Ctags](http://ctags.sourceforge.net/) required.
