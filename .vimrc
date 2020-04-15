@@ -84,6 +84,7 @@ set fileencodings=utf-8,utf-16,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
                                " Auto detect file encoding
 
 " Key Remap Settings
+let mapleader = " "
 " Move cursor around with Ctrl+hjkl
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
