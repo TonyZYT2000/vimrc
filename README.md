@@ -50,6 +50,7 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim): Onedark color theme.
 - [raimondi/delimitmate](https://github.com/Raimondi/delimitMate): Automatic closing.
 - [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot): Language pack.
+- [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime): WakaTime coding time counter.
 - [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim): Beautiful status line.
 - [wlangstroth/vim-racket](https://github.com/wlangstroth/vim-racket): Racket support.
 - [voldikss/vim-translator](https://github.com/voldikss/vim-translator): Translate text in vim to Chinese.
