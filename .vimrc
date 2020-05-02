@@ -143,6 +143,11 @@ augroup myFileSettings
   au FileType vim set shiftwidth=2  " set width of < and > cmd to 2 spaces
   au FileType vim set softtabstop=2 " pressing tab inserts 2 spaces
 
+  " Tab settings for TeX files
+  au FileType tex set expandtab     " turn tabs into spaces visually
+  au FileType tex set shiftwidth=4  " set width of < and > cmd to 4 spaces
+  au FileType tex set softtabstop=4 " pressing tab inserts 4 spaces
+
   " Tab settings for Java files
   au FileType java set expandtab     " turn tabs into spaces visually
   au FileType java set shiftwidth=4  " set width of < and > cmd to 4 spaces
