@@ -153,6 +153,11 @@ augroup myFileSettings
   au FileType java set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType java set softtabstop=4 " pressing tab inserts 4 spaces
 
+  " Tab settings for JSON files
+  au FileType json set expandtab     " turn tabs into spaces visually
+  au FileType json set shiftwidth=4  " set width of < and > cmd to 4 spaces
+  au FileType json set softtabstop=4 " pressing tab inserts 4 spaces
+
   " No expansion at all for Makefiles
   au FileType make set tabstop=8     " tab size as 8 spaces
   au FileType make set noexpandtab   " keep tabs as tabs
@@ -164,7 +169,7 @@ augroup myFileSettings
   au FileType python set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType python set softtabstop=4 " pressing tab inserts 4 spaces
 
-  " Tab settings for scheme file
+  " Tab settings for Scheme file
   au FileType scheme set expandtab     " turn tabs into spaces visually
   au FileType scheme set shiftwidth=2  " set width of < and > cmd to 2 spaces
   au FileType scheme set softtabstop=2 " pressing tab inserts 2 spaces
