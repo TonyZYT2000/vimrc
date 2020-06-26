@@ -25,6 +25,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'easymotion/vim-easymotion'
 Plug 'skywind3000/vim-terminal-help'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeToggle' }
