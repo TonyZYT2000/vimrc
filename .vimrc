@@ -14,6 +14,7 @@ Plug 'mhinz/vim-signify'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'luochen1990/rainbow'
 Plug 'joshdick/onedark.vim'
 Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
@@ -25,7 +26,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'easymotion/vim-easymotion'
 Plug 'skywind3000/vim-terminal-help'
-Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeToggle' }
@@ -201,6 +201,9 @@ let g:lightline = {
 let g:signify_skip_filetype = { 'markdown': 1 }
 
 "let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
+" Rainbow Settings
+let g:rainbow_active = 1
 
 " EasyMotion Settings
 let g:EasyMotion_smartcase = 1  " Enable smartcase for characters
