@@ -33,7 +33,7 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [elze/vim-json](https://github.com/elzr/vim-json): Better JSON highlighting.
 - [tomasr/molokai](https://github.com/tomasr/molokai): Molokai color theme.
 - [ap/vim-css-color](https://github.com/ap/vim-css-color): Highlight color values.
-- [fzf.vim](https://github.com/junegunn/fzf.vim): Fuzzy search in vim!
+- [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim): Fuzzy search in vim!
     - Fuzzy file search mapped to `Ctrl+P`.
     - `Ctrl+j/k` to move between results.
     - `Ctrl+t` to open search result in new tab.
@@ -46,7 +46,8 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive): Git integration.
     - Enter `:G` for `git status`!. Then, press `g?` for more commands.
 - [tpope/vim-surround](https://github.com/tpope/vim-surround): Change surrounding symbols easily.
-- Type `<Space>cs{old}{new}` to change surrounding from old char to new char.
+    - Type `<Space>cs{old}{new}` to change surrounding from old char to new char.
+- [luochen1990/rainbow](https://github.com/luochen1990/rainbow): Rainbow parentheses. Useful for Lisp!
 - [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim): Onedark color theme.
 - [raimondi/delimitmate](https://github.com/Raimondi/delimitMate): Automatic closing.
 - [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot): Language pack.
