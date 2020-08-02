@@ -46,7 +46,7 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive): Git integration.
     - Enter `:G` for `git status`!. Then, press `g?` for more commands.
 - [tpope/vim-surround](https://github.com/tpope/vim-surround): Change surrounding symbols easily.
-    - Type `<Space>cs{old}{new}` to change surrounding from old char to new char.
+    - Type `cs{old}{new}` to change surrounding from old char to new char.
 - [luochen1990/rainbow](https://github.com/luochen1990/rainbow): Rainbow parentheses. Useful for Lisp!
 - [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim): Onedark color theme.
 - [raimondi/delimitmate](https://github.com/Raimondi/delimitMate): Automatic closing.
@@ -61,18 +61,23 @@ Then in vim, run ``:PlugInstall`` and all set!
 - [scrooloose/nerdcommenter](https://github.com/preservim/nerdcommenter): Commet blocks of codes easily!
     - Type `<Space>cc` to comment out the line.
     - Type `<Space>cu` to uncomment the line.
-    - Use visual mode to select a block of code, and type `<Space>cc` to comment the block.
+    - Type `<Space>cs` to comment in a block.
+    - Type `<Space>c$` to comment from cursor to end of line.
+    - Type `<Space>cA` to add a comment block at end of line and enter insert mode.
+    - Type `<Space>c<Space>` to toggle comment status of the line.
+    - Use visual mode to select multiple lines of code, and type `<Space>cc` to comment each line.
+    - Use visual mode to select multiple lines of code, and type `<Space>cs` to comment lines as a block.
     - Use visual mode to select a block of code, and type `<Space>cu` to uncomment the block
 - [terryma/vim-smooth-scroll](https://github.com/terryma/vim-smooth-scroll): Make scrolling in vim smooth.
 - [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion): Move cursor around easily.
     - Type `s{char}{char}` to search for 2 characters and move to them.
-    - Type `<Space>f{char}` to search for 1 character and move to them.
-    - Type `<Space>w` to move to a word.
-    - Type `<Space>L` to move to a line.
-    - Type `<Space>h` to move left with EasyMotion.
-    - Type `<Space>j` to move down with EasyMotion.
-    - Type `<Space>k` to move up with EasyMotion.
-    - Type `<Space>l` to move right with EasyMotion.
+    - Type `<Space><Space>f{char}` to search for 1 character and move to them.
+    - Type `<Space><Space>w` to move to a word.
+    - Type `<Space><Space>L` to move to a line.
+    - Type `<Space><Space>h` to move left with EasyMotion.
+    - Type `<Space><Space>j` to move down with EasyMotion.
+    - Type `<Space><Space>k` to move up with EasyMotion.
+    - Type `<Space><Space>l` to move right with EasyMotion.
 - [skywind3000/vim-terminal-help](https://github.com/skywind3000/vim-terminal-help): Nice terminal integration.
     - Mapped to `Alt+=`.
     - Type `Ctrl+\ Ctrl+N` to enter normal mode in terminal.
