@@ -75,7 +75,8 @@ set ignorecase                 " Make default search not case sensitive
 set autoindent                 " Auto indentation
 set splitbelow                 " Set sp to split below
 set splitright                 " Set vsp to split on right
-set noerrorbells               " Turn off error bells (screen flashing)
+set belloff=all                " Turn off error bells
+set noerrorbells               " Turn off error bells
 set tabpagemax=100             " Allow 100 tabs opened instead of 10
 set updatetime=100             " Set update time to 100ms
 set encoding=utf-8             " Set default encoding to utf-8
@@ -212,19 +213,19 @@ let g:EasyMotion_use_smartsign_us = 1 " Enable smartcase for signs
 " s{char}{char} to move to {char}{char}
 nmap s <Plug>(easymotion-overwin-f2)
 " <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+map  <Leader><Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
 " <Leader>w to move to a word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
 " <Leader>L to move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
+map <Leader><Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader><Leader>L <Plug>(easymotion-overwin-line)
 " <Leader>h/j/k/l to avoid repeating h/j/k/l
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader><Leader>l <Plug>(easymotion-lineforward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><Leader>h <Plug>(easymotion-linebackward)
 " Use EasyMotion in search mode
 " map  / <Plug>(easymotion-sn)
 " omap / <Plug>(easymotion-tn)
