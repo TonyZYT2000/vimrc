@@ -160,6 +160,11 @@ augroup myFileSettings
   au FileType json set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType json set softtabstop=4 " pressing tab inserts 4 spaces
 
+  " Tab settings for JSON files
+  au FileType html set expandtab     " turn tabs into spaces visually
+  au FileType html set shiftwidth=4  " set width of < and > cmd to 4 spaces
+  au FileType html set softtabstop=4 " pressing tab inserts 4 spaces
+
   " No expansion at all for Makefiles
   au FileType make set tabstop=8     " tab size as 8 spaces
   au FileType make set noexpandtab   " keep tabs as tabs
