@@ -181,6 +181,10 @@ augroup myFileSettings
   au FileType markdown set shiftwidth=4  " set width of < and > cmd to 4 spaces
   au FileType markdown set softtabstop=4 " pressing tab inserts 4 spaces
 
+  " Tab settings for Javascript file
+  au FileType javascript set expandtab     " turn tabs into spaces visually
+  au FileType javascript set shiftwidth=4  " set width of < and > cmd to 4 spaces
+  au FileType javascript set softtabstop=4 " pressing tab inserts 4 spaces
 augroup END
 
 " Plugin Settings
