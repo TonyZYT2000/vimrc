@@ -221,7 +221,6 @@ let g:signify_skip_filetype = { 'markdown': 1 }
 let g:rainbow_active = 1
 
 " Terminal Helper Settings
-let g:terminal_shell = 'pwsh'
 let g:terminal_kill = 'term'
 let g:terminal_close = 1
 
