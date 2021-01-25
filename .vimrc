@@ -220,6 +220,11 @@ let g:signify_skip_filetype = { 'markdown': 1 }
 " Rainbow Settings
 let g:rainbow_active = 1
 
+" Terminal Helper Settings
+let g:terminal_shell = 'pwsh'
+let g:terminal_kill = 'term'
+let g:terminal_close = 1
+
 " EasyMotion Settings
 let g:EasyMotion_smartcase = 1  " Enable smartcase for characters
 let g:EasyMotion_do_mapping = 0 " Disable default key mappings
