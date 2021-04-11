@@ -171,6 +171,11 @@ augroup myFileSettings
   au FileType make set shiftwidth=8  " set width of < and > cmd to 8 spaces
   au FileType make set softtabstop=8 " pressing tab inserts 8 spaces
 
+  " Tab settings for CMake files
+  au FileType cmake set expandtab     " turn tabs into spaces visually
+  au FileType cmake set shiftwidth=4  " set width of < and > cmd to 4 spaces
+  au FileType cmake set softtabstop=4 " pressing tab inserts 4 spaces
+
   " Tab settings for Python files
   au FileType python set expandtab     " turn tabs into spaces visually
   au FileType python set shiftwidth=4  " set width of < and > cmd to 4 spaces
