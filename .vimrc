@@ -186,6 +186,11 @@ augroup myFileSettings
   au FileType scheme set shiftwidth=2  " set width of < and > cmd to 2 spaces
   au FileType scheme set softtabstop=2 " pressing tab inserts 2 spaces
 
+  " Tab settings for Haskell file
+  au FileType haskell set expandtab     " turn tabs into spaces visually
+  au FileType haskell set shiftwidth=4  " set width of < and > cmd to 4 spaces
+  au FileType haskell set softtabstop=4 " pressing tab inserts 4 spaces
+
   " Tab settings for Markdown file
   au FileType markdown set expandtab     " turn tabs into spaces visually
   au FileType markdown set shiftwidth=4  " set width of < and > cmd to 4 spaces
