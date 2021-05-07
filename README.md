@@ -26,6 +26,20 @@ Install [vim-plug](https://github.com/junegunn/vim-plug) to get plugins I use.
     )
     ```
 
+Create soft link  in user directory.
+
+- Unix
+
+    ```bash
+    ln -s /PATH_TO_REPO/.vimrc ~/.vimrc
+    ```
+
+- Windows
+
+    ```power
+    cmd /c mklink C:\Users\USERNAME\.vimrc PATH_TO_REPO\.vimrc
+    ```
+
 Then in vim, run ``:PlugInstall`` and all set!
 
 ## Plugins
