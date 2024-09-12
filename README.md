@@ -31,13 +31,13 @@ Create soft link  in user directory.
 - Unix
 
     ```bash
-    ln -s /PATH_TO_REPO/.vimrc ~/.vimrc
+    ln -s ./.vimrc ~/.vimrc
     ```
 
 - Windows
 
     ```power
-    cmd /c mklink C:\Users\USERNAME\.vimrc PATH_TO_REPO\.vimrc
+    New-Item -ItemType SymbolicLink -Target .\.vimrc -Path ~\.vimrc 
     ```
 
 Then in vim, run ``:PlugInstall`` and all set!
