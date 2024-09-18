@@ -59,7 +59,7 @@ if has("gui_running")
   if has("gui_gtk3")
     set guifont=Fira\ Code\ 12
   elseif has("gui_win32")
-    set guifont=Fira\ Code:h14 "Set font
+    set guifont=Fira\ Code:h12 "Set font
     "set guifont=Sarasa\ Mono\ SC:h14 "Set font
   endif
 endif
