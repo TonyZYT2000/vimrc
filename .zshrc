@@ -25,3 +25,7 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
 alias llh='ls -alFh'
+
+# environment variable
+export EDITOR=vim
+
