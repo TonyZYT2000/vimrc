@@ -35,12 +35,12 @@ fi
 
 if has nvm; then
   echo "=== nvm: update node LTS + npm ==="
-  if [[ "$(nvm current)" != "$(nvm version --lts)" ]]; then
+  if [[ "$(nvm current)" != "$(nvm version 'lts/*')" ]]; then
     nvm install --lts --latest-npm --reinstall-packages-from=current
   else
-    nvm install --lts --latest-npm
+    nvm install-latest-npm
   fi
-  nvm alias default "$(nvm version --lts)"
+  nvm alias default "$(nvm current)"
   echo ""
 fi
 
