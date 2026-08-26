@@ -52,7 +52,9 @@ fi
 
 if has gh; then
   echo "=== gh extensions ==="
-  gh extension upgrade --all
+  if [[ -n "$(gh extension list)" ]]; then
+      gh extension upgrade --all
+  fi
   echo ""
 fi
 
