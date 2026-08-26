@@ -2,49 +2,79 @@
 source ~/.zshrc
 set -e
 
-echo "=== uv ==="
-uv self update
-uv tool upgrade --all
+has() {
+  (( $+commands[$1] || $+functions[$1] ))
+}
 
-echo ""
-echo "=== rustup ==="
-rustup update
+if has uv; then
+  echo "=== uv ==="
+  uv self update
+  uv tool upgrade --all
+  echo ""
+fi
 
-echo ""
-echo "=== zinit self-update + plugin update ==="
-zinit self-update
-zinit update --all
+if has rustup; then
+  echo "=== rustup ==="
+  rustup update
+  echo ""
+fi
 
-echo ""
-echo "=== conda (miniforge) ==="
-conda update -n base -c conda-forge conda -y
-conda update --all -y
+if has zinit; then
+  echo "=== zinit self-update + plugin update ==="
+  zinit self-update
+  zinit update --all
+  echo ""
+fi
 
-echo ""
-echo "=== nvm: update node LTS + npm ==="
-nvm install 'lts/*' --reinstall-packages-from=current
-nvm alias default 'lts/*'
-npm install -g npm@latest
+if has conda; then
+  echo "=== conda (miniforge) ==="
+  conda update -n base -c conda-forge conda -y
+  conda update --all -y
+  echo ""
+fi
 
-echo ""
-echo "=== npm global packages ==="
-npm update -g
+if has nvm; then
+  echo "=== nvm: update node LTS + npm ==="
+  nvm install 'lts/*' --reinstall-packages-from=current
+  nvm alias default 'lts/*'
+  npm install -g npm@latest
+  echo ""
+fi
 
-echo ""
-echo "=== gh extensions ==="
-gh extension upgrade --all
+if has npm; then
+  echo "=== npm global packages ==="
+  npm update -g
+  echo ""
+fi
 
-echo ""
-echo "=== vim-plug ==="
-vim '+PlugUpgrade' '+PlugUpdate' '+qa'
+if has gh; then
+  echo "=== gh extensions ==="
+  gh extension upgrade --all
+  echo ""
+fi
 
-echo ""
-echo "=== snap ==="
-snap refresh
+if has herdr; then
+  echo "=== herdr ==="
+  herdr update
+  echo ""
+fi
 
-echo ""
-echo "=== flatpak ==="
-flatpak update -y
+if has vim; then
+  echo "=== vim-plug ==="
+  vim '+PlugUpgrade' '+PlugUpdate' '+qa'
+  echo ""
+fi
 
-echo ""
+if has snap; then
+  echo "=== snap ==="
+  snap refresh
+  echo ""
+fi
+
+if has flatpak; then
+  echo "=== flatpak ==="
+  flatpak update -y
+  echo ""
+fi
+
 echo "=== Done! ==="
